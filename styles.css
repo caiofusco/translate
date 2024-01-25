@@ -1,3 +1,11 @@
 body {
-    background-color: #5e5d5d;
+    background-color: #1A171E;
+}
+
+h1 {
+    color: #F5F5F5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1rem 0 0 1rem;
 }
