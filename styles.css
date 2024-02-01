@@ -54,7 +54,7 @@ h1 {
 }
 
 .text-field:focus {
-    outline-color: #1A171E;
+    outline: none;
 }
 
 .translated-text-field {
