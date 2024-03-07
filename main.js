@@ -16,21 +16,18 @@ fetch ('https://reqres.in/api/users', {
 .then((data) => console.log(data))
 */
 
-const url = 'https://yandextranslatezakutynskyv1.p.rapidapi.com/detectLanguage';
-const options = {
+fetch ('https://yandextranslatezakutynskyv1.p.rapidapi.com/translate', {
 	method: 'POST',
 	headers: {
 		'content-type': 'application/x-www-form-urlencoded',
 		'X-RapidAPI-Key': 'd38b50402emshc48d3746f0677f0p1c95bbjsn1445d5ed0956',
 		'X-RapidAPI-Host': 'YandexTranslatezakutynskyV1.p.rapidapi.com'
 	},
-	body: new URLSearchParams({text: '<REQUIRED>'})
-};
-
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
-}
+	body: JSON.stringify({
+		lang: 'es',
+		text: 'hello'
+	}),
+})
+.then((res) => console.log(res))
+.then((data) => console.log(data))
+.catch((err) => console.log(err))
